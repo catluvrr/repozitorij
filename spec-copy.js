@@ -1,6 +1,6 @@
 
 
-/// <reference types="cypress" />
+<reference types="cypress" />
 
 describe('before each', () => {
   beforeEach(() => {
