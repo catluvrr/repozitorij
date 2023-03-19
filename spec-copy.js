@@ -116,21 +116,14 @@ it("Click on cart and click plus on Espresso", () => {
   cy.get('[aria-label="Add one Espresso"]').click();
   cy.get('.list-item').should('be.visible');
 });
-});
-///<reference types="cypress"/>
-describe("Check if user will get discount with every third purchase of coffee he makes from the cart page", () => {
-it("Visit page", () => {
-  cy.visit('https://coffee-cart.netlify.app/')
-});
-it("Click on Espresso", () => {
-  cy.get('[data-cy="Espresso"]').click();
-});
-it("Click on Total button and fill in the payment details", () => {
+  it("Click on Total button and fill in the payment details", () => {
   cy.get('[data-test="checkout"]').click();
   cy.get('#name').type('user');
   cy.get('#email').type('user@gmail.ba');
   cy.get('#submit-payment').click();
   cy.get('.snackbar').should('be.visible');
+});
 })
-})
-})
+
+});
+
